@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Context Api Boilerplate for class and Hook
 
-## Available Scripts
+So after hook came in action was trying to mix useContext and ContextApi with Reducer to work together. 
 
-In the project directory, you can run:
+###So why I need to see this
+Well `useReducer` helps you to use for only functional component not class component so if you are in any legacy project with ```class Component``` trying to use `useReducer` & `useContext` api also `context api Consumer` this repo will help you out.
 
-### `npm start`
+I am not sure if this is right approach feel free to share your opinion. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###How this works?
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+for    `class Component`  
 
-### `npm test`
+`import {AppContextConsumer} from './Hooks/StateManager';`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+and wrap it with your component like
 
-### `npm run build`
+``AppContextConsumer(YourComponent)``
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+when you export the file
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+`state available: this.props.context`  & `reducer: this.props.reducer`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br/>
 
-### `npm run eject`
+For `Hook`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`import {getState} from './Hooks/StateManager';`
+and use them as 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`  const [ state , dispatch] = getState();`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Thanks, 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
