@@ -2,12 +2,12 @@
 
 So after hook came in action was trying to mix useContext and ContextApi with Reducer to work together. 
 
-###So why I need to see this
+### So why I need to see this
 Well `useReducer` helps you to use for only functional component not class component so if you are in any legacy project with ```class Component``` trying to use `useReducer` & `useContext` api also `context api Consumer` this repo will help you out.
 
 I am not sure if this is right approach feel free to share your opinion. 
 
-###How this works?
+### How this works?
 
 for    `class Component`  
 
